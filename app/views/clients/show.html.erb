@@ -6,13 +6,14 @@
   <p>Endereços: </p>
   <ul>
     <%= render partial: 'addresses/address', collection: @client.addresses %>
+
   </ul>
 <%end%>
 
 
 <div>
   <%= link_to "Edit this client", edit_client_path(@client) %> |
-  <%= link_to "Back to clients", clients_path %> 
-
+  <%= link_to "Back to clients", clients_path(client: @client)%> |
+  <%= link_to "Add some address", new_address_path(:client, value: @client.id) %> 
   <%= button_to "Destroy this client", @client, method: :delete %>
 </div>
