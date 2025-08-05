@@ -3,6 +3,7 @@
 <%= render @address %>
 
 <div>
+  <%= link_to "Goto client", client_path(@address.client) %> |
   <%= link_to "Edit this address", edit_address_path(@address) %> |
   <%= link_to "Back to addresses", addresses_path %>
 
