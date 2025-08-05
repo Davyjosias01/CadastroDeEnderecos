@@ -2,14 +2,16 @@
 
 <h1>Clients</h1>
 
+
+<div>
+  <%= render "form", client: Client.new %>
+</div>
+
 <div id="clients">
   <% @clients.each do |client| %>
     <%= render client %>
     <p>
       <%= link_to "Show this client", client %>
-    </p>
-    <p>
-      <%= link_to "Add some address", new_address %>
     </p>
   <% end %>
 </div>
